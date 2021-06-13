@@ -20,9 +20,13 @@ Route::get('/about', 'HomeController@about');
 Route::get('/contact', 'HomeController@contact');
 
 Route::get('/user', 'UserController@index');
+Route::get('/สวัสดี/{name}/{surname}/{age}', 'UserController@hello');
 
 Route::get('/calculator/sum/{num1}/{num2}', 'calculatorController@sum');
 
-Route::get('/สวัสดี/{name}/{surname}/{age}', 'UserController@hello');
+Route::get('/กิจกรรม', 'ActivityController@index');
+Route::get('/เพิ่มกิจกรรม/{name}', 'ActivityController@create');
+Route::get('/ลบกิจกรรม/{id}', 'ActivityController@delete');
+
 
 
